@@ -112,33 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &208898828 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2527995025302973137, guid: 1634c6548c486c142b388a56b3e43044,
-    type: 3}
-  m_PrefabInstance: {fileID: 463825741}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &208898831
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208898828}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &298648780
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,11 +258,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1486573504979310766, guid: 1634c6548c486c142b388a56b3e43044,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1634c6548c486c142b388a56b3e43044, type: 3}
 --- !u!1 &468345604
@@ -429,6 +397,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship3_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8166756637107260330, guid: 6c16dfd74b325d246b8dff52c0d498c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8366127563853694158, guid: 6c16dfd74b325d246b8dff52c0d498c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -497,6 +470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship2_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018538797351361518, guid: 697f25f3e9178e747bd22db479a3358e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4144876644891504588, guid: 697f25f3e9178e747bd22db479a3358e,
         type: 3}
@@ -636,6 +614,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship1_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4537320659939081272, guid: 0d646399a9fe1cf4c8714a3225ac12c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9036101604908961230, guid: 0d646399a9fe1cf4c8714a3225ac12c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -774,6 +757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ship1_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4537320659939081272, guid: 0d646399a9fe1cf4c8714a3225ac12c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 9036101604908961230, guid: 0d646399a9fe1cf4c8714a3225ac12c9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,6 +835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 4537320659939081272, guid: 0d646399a9fe1cf4c8714a3225ac12c9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9036101604908961230, guid: 0d646399a9fe1cf4c8714a3225ac12c9,
         type: 3}
@@ -1028,6 +1021,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ship2_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018538797351361518, guid: 697f25f3e9178e747bd22db479a3358e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4144876644891504588, guid: 697f25f3e9178e747bd22db479a3358e,
         type: 3}

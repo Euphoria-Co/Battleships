@@ -55,7 +55,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.3}
+  m_Size: {x: 1.26, y: 0.76}
   m_EdgeRadius: 0
 --- !u!1 &8018538797351361518
 GameObject:
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 4237656073591736555}
   - component: {fileID: 1680347406}
   - component: {fileID: 1475087275513669699}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Ship2
   m_TagString: Ship
   m_Icon: {fileID: 0}
@@ -164,7 +164,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 1, y: 0.5}
   m_EdgeRadius: 0
 --- !u!114 &1680347406
 MonoBehaviour:
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipscollide: 0
+  shipsize: 2
 --- !u!50 &1475087275513669699
 Rigidbody2D:
   serializedVersion: 4
