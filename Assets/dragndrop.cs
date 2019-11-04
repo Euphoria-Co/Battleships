@@ -23,6 +23,9 @@ public class dragndrop : MonoBehaviour {
     bool one_click = false;
     bool timer_running;
     float timer_for_double_click;
+    private bool shipcountdecresed = true;
+    private bool shipcountincresed;
+
     void Start () {
         orginalposition = transform.position;
         lastgood = transform.position;
@@ -46,7 +49,6 @@ public class dragndrop : MonoBehaviour {
         if (!one_click) {
             one_click = true;
             timer_for_double_click = Time.time;
-            timer_running = true;
         } else {
             one_click = false;
             Rotate ();
@@ -88,26 +90,26 @@ public class dragndrop : MonoBehaviour {
                 one_click = false;
             }
         }
-        
+
     }
     void Rotate () {
         if (rotated == false && lastgood != orginalposition && transform.position.y >= maxY + (shipsize - 1) * Pole.tilesize) {
             transform.eulerAngles = new Vector3 (0, 0, 270);
         } else if (transform.position.x <= maxX - (shipsize - 1) * Pole.tilesize) {
-            transform.rotation = Quaternion.identity;       
+            transform.rotation = Quaternion.identity;
         }
-         StartCoroutine(waiter());
+        StartCoroutine (waiter ());
 
     }
-    IEnumerator waiter(){
-     yield return new WaitForSeconds(0.05f);
+    IEnumerator waiter () {
+        yield return new WaitForSeconds (0.05f);
         if (shipscollided > 0 && transform.eulerAngles.z == 270) {
             transform.rotation = Quaternion.identity;
         } else if (shipscollided > 0) {
             transform.eulerAngles = new Vector3 (0, 0, 270);
         }
-    } 
-  
+    }
+
     void SnapToGrid () {
         if (transform.position.y >= maxY && transform.position.y <= minY && transform.position.x <= maxX && transform.position.x >= minX) {
             temp = new Vector2 ((Mathf.Round (transform.position.x * 2)) / 2, (Mathf.Round (transform.position.y * 2) / 2));
@@ -116,6 +118,11 @@ public class dragndrop : MonoBehaviour {
                 placed = true;
                 lastgood = transform.position;
                 islastgood = true;
+                shipcountdecresed = false;
+                if(shipcountincresed == false){
+                 Controler.ShipsPlaced++;
+                shipcountincresed = true;
+                }
             } else if (placed == false && shipscollided > 0) {
                 if (islastgood = true) {
                     transform.position = lastgood;
@@ -130,6 +137,11 @@ public class dragndrop : MonoBehaviour {
             } else {
                 transform.position = orginalposition;
                 transform.rotation = Quaternion.identity;
+                if(shipcountdecresed == false){
+                Controler.ShipsPlaced--;
+                shipcountdecresed = true;
+                shipcountincresed = false;
+            }
             }
         }
     }

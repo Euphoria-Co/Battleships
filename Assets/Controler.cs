@@ -5,15 +5,11 @@ using UnityEngine;
 public class Controler : MonoBehaviour
 {
 
-    public int selectedShip;
-    public void shipcos(int ship)
-    {
-        selectedShip = ship;
-        Debug.Log(selectedShip);
+    static public int ShipsPlaced;
+    public Transform [] Ships;
+
+    void Start () {
+
     }
-       
-    void Update()
-    {
-        
-    }
+   
 }

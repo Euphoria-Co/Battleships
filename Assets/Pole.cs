@@ -12,6 +12,7 @@ public class Pole : MonoBehaviour
     static public float tilesize = 0.5f;
     public static int startX = -6;
     public static int startY = 2;
+    private int name;
 
     void Start()
     {
@@ -32,6 +33,8 @@ public class Pole : MonoBehaviour
                 float posY = row * -tilesize;
 
                 tile.transform.position = new Vector3(posX+startX, posY+startY,1);
+                name++;
+                tile.name = "Pole_" + name;
             
             }
         }
